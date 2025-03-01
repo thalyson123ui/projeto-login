@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*
-    palera de cores
+    Paleta de cores:
     #E1C095
     #A58258
     #ACC8DD
@@ -9,15 +9,14 @@
 
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body, html {
     background-color: #A58258;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
 }
 
 main {
@@ -35,12 +34,12 @@ section#login {
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
 
-    transition: width 2s, heigth 1s;
-    transition-timing-function: case;
+    transition: width 2s, height 1s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem {
@@ -63,4 +62,64 @@ div#formulario > h1 {
 
 div#formulario > p {
     font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: #ACC8DD;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+form > label {
+    visibility: hidden;
+    position: absolute;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #ACC8DD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form > input[type=submit]:hover {
+    background-color: #A58258;
+}
+
+form > input[type=submit]:active {
+    background-color: #8A6D4F;
+}
+
+form a.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espaço entre o texto e o ícone */
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: yellow;
+    color: #A58258;
+    border: 1px solid #cccc00;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+form a.botao:hover {
+    background-color: #E1C095;
+    color: white;
+}
+
+form a.botao i {
+    font-size: 1.2em;
 }
